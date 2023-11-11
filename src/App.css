@@ -81,7 +81,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  transition-duration: 1s;
 }
 
 .progress-bar-fill {
@@ -109,7 +108,7 @@
 
   .popup-body {
   text-align: center;
-  margin: 10%;
+  width: 80%;
   padding: 0 0 2rem 0;
   border-radius: 15px;
   border-color: black;

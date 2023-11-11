@@ -4,19 +4,16 @@ import './App.css';
 import './challengeList.css';
 import './close.css';
 import challenges from './challenges.json';
+import { shareOnMobile } from 'react-mobile-share';
 
 const App = () => {
-  // const [popupOpen, setPopupOpen] = useState(false);
-  // const [popupTitle, setPopupTitle] = useState(null);
-  // const [popupInstructuons, setPopupInstructions] = useState(null);
   const [selectedChallenge, setSelectedChallenge] = useState(null);
-  // const [userScore, setUserScore] = useState(0);
-
+  const [levelup, setLevelup] = useState(false);
   const [cookies, setCookie, removeCookie] = useCookies(['user']);
 
-  function level() {
+  function level(score) {
     if (cookies.user?.score)
-      return Math.min(Math.floor(cookies.user.score / 100) + 1, 10)
+      return Math.min(Math.floor(score / 100) + 1, 10)
     return 1
   }
   
@@ -28,7 +25,6 @@ const App = () => {
 
   // Set initial cookie
   if (cookies.user === undefined) {
-    console.log("asdasdasd")
     setCookie('user', {score: 0, completed: []})
   }
 
@@ -36,7 +32,7 @@ const App = () => {
     return (
       <div className="progress-container">
         <div className="progress-bar">
-          <div className="progress-bar-fill" style={{ width: progress() + '%'}} />
+          <div className="progress-bar-fill" style={{ width: progress() + '%', transitionDuration: '2s'}} />
         </div>
       </div>
     )
@@ -47,16 +43,43 @@ const App = () => {
   }
   
   function doChallenge() {
-    console.log(cookies.user)
-    console.log(selectedChallenge)
-    setCookie('user', {score: cookies.user.score + 20, completed: cookies.user.completed.concat([selectedChallenge.id])})
+    const originalLevel = level(cookies.user.score)
+    const newScore = cookies.user.score + 20
+
+    setCookie('user', {score: newScore, completed: cookies.user.completed.concat([selectedChallenge.id])})
     setSelectedChallenge(null)
-    console.log(cookies.user)
+    if (level(newScore) !== originalLevel) {
+      setLevelup(true)
+    }
   }
+
+
+  function PopupLevelup() {
+    return (
+      <div className="popup-container">
+       <div className="popup-body">
+        <div style={{marginTop: '1rem', display: 'flex', flexDirection: 'row', justifyContent:'flex-end'}}>
+          <div onClick={() => setLevelup(false)} className="score" style={{height: 'auto', paddingBottom: '3px', paddingTop: '3px'}}>
+          close
+          </div>
+        </div>
+        <p>{'You reached level '+ level(cookies.user.score) + '!'}</p>
+        <div className="done-button" onClick={() => {
+          setLevelup(false)
+          shareOnMobile({
+            text: "Hey! I just reached level " + level(cookies.user.score),
+            url: "https://master--tranquil-cobbler-a5bc99.netlify.app/",
+            title: "Daily finess!",
+          })
+        }}>Share with friends!</div>
+       </div>
+      </div>
+    );
+  };
 
   function Popup() {
     return (
-      <div className="popup-container" onClick={() => setSelectedChallenge(null)}>
+      <div className="popup-container">
        <div className="popup-body">
         <div style={{marginTop: '1rem', display: 'flex', flexDirection: 'row', justifyContent:'flex-end'}}>
           <div onClick={() => setSelectedChallenge(null)} className="score" style={{height: 'auto', paddingBottom: '3px', paddingTop: '3px'}}>
@@ -64,6 +87,7 @@ const App = () => {
           </div>
         </div>
         <p>{selectedChallenge.name}</p>
+        <p>{selectedChallenge.icon}</p>
         <p style={{padding:'3rem'}}>{selectedChallenge.instructions}</p>
         <div className="done-button" onClick={() => doChallenge()}>Done</div>
        </div>
@@ -75,8 +99,8 @@ const App = () => {
       <div className='challenges'>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           {challenges
-            .filter((item => item.level == level() && !cookies.user.completed.includes(item.id)))
-            .concat(challenges.filter((item => item.level == level() && cookies.user.completed.includes(item.id))))
+            .filter((item => item.level == level(cookies.user.score) && !cookies.user.completed.includes(item.id)))
+            .concat(challenges.filter((item => item.level == level(cookies.user.score) && cookies.user.completed.includes(item.id))))
             .map((item, index) => (
             <li
               key={index}
@@ -84,7 +108,7 @@ const App = () => {
               onClick={() => openPopup(item)}
               style={cookies.user.completed.includes(item.id) ? {backgroundColor: 'lightgrey'} : {}}
             >
-                {item.name}
+                {item.name + item.icon}
             </li>
           ))}
         </ul>
@@ -102,12 +126,13 @@ const App = () => {
           <p>My daily challenges</p>
         </div>
         <div className="score">
-          <p>{level()}</p>
+          <p>{level(cookies.user.score)}</p>
         </div>
       </div>
       <ChallengeList />
       <ProgressBar />
       {selectedChallenge ? <Popup /> : null}
+      {levelup ? <PopupLevelup /> : null}
       </header>
     </div>
     </>
