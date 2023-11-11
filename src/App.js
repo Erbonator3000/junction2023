@@ -119,20 +119,22 @@ const App = () => {
   return (
     <>
     <div className="App">
-      <header className="body">
-      <div className="top-bar">
-        <div className="title">
-          <p>My daily challenges</p>
+      <div className="app-container">
+        <div className="body">
+        <div className="top-bar">
+          <div className="title">
+            <p>My daily challenges</p>
+          </div>
+          <div className="score">
+            <p>{level(cookies.user.score)}</p>
+          </div>
         </div>
-        <div className="score">
-          <p>{level(cookies.user.score)}</p>
+        <ChallengeList />
+        <ProgressBar />
+        {selectedChallenge ? <Popup /> : null}
+        {levelup ? <PopupLevelup /> : null}
         </div>
       </div>
-      <ChallengeList />
-      <ProgressBar />
-      {selectedChallenge ? <Popup /> : null}
-      {levelup ? <PopupLevelup /> : null}
-      </header>
     </div>
     </>
   );

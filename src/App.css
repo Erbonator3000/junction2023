@@ -7,9 +7,19 @@
   font-family: 'Concert One';
 }
 
+.app-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .body {
   background-color: #fff147;
-  height: 100vh;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,8 +29,8 @@
 }
 
 .top-bar {
-  width: 100%;
   display: flex;
+  align-self: stretch;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
@@ -33,8 +43,8 @@
   background-color: #4aecf1;
   border-radius: 20px;
   padding: 1rem 2rem 1rem 2rem;
-  border-left: 5px solid #00000011;
-  border-bottom: 5px solid #00000011;
+  border-left: 5px solid #e2d649ff;
+  border-bottom: 5px solid #e2d649ff;
   font-size: x-large
 }
 .title p {
@@ -43,16 +53,23 @@
 
 .score {
   background-color: #4aecf1;
-  width: 20%;
   height: 4rem;
+  aspect-ratio: 1;
   
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
 
-  border-left: 5px solid #00000011;
-  border-bottom: 5px solid #00000011;
+  border-left: 5px solid #e2d649ff;
+  border-bottom: 5px solid #e2d649ff;
 
   color: white;
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.score p {
+  margin: 0;
 }
 
 .progress-container {
