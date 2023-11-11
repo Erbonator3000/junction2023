@@ -67,9 +67,8 @@ const App = () => {
         <div className="done-button" onClick={() => {
           setLevelup(false)
           shareOnMobile({
-            text: "Hey! I just reached level " + level(cookies.user.score),
             url: "https://master--tranquil-cobbler-a5bc99.netlify.app/",
-            title: "Daily finess!",
+            title: "Hey! I just reached level " + level(cookies.user.score) + ', Your turn to get moving! ',
           })
         }}>Share with friends!</div>
        </div>
