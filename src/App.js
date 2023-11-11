@@ -6,33 +6,44 @@ import './close.css';
 import challenges from './challenges.json';
 import { shareOnMobile } from 'react-mobile-share';
 
+
+const levelColors = [
+  '#FFADAD',
+  '#FFD6A6',
+  '#ffb2cd',
+  '#CFFC8E',
+  '#95FDBF',
+  '#3FEDFF',
+  '#A0C4FF',
+  '#BDB2FF',
+  '#DABCF6',
+  '#BDB2FF',
+]
+
 const App = () => {
   const [selectedChallenge, setSelectedChallenge] = useState(null);
   const [levelup, setLevelup] = useState(false);
+  const [displayScore, setDisplayScore] = useState(null);
   const [cookies, setCookie, removeCookie] = useCookies(['user']);
-
-  function level(score) {
-    if (cookies.user?.score)
-      return Math.min(Math.floor(score / 100) + 1, 10)
-    return 1
-  }
-  
-  function progress() {
-    if (cookies.user?.score)
-      return (cookies.user.score % 100)
-    return 0
-  }
 
   // Set initial cookie
   if (cookies.user === undefined) {
     setCookie('user', {score: 0, completed: []})
   }
 
+  function level(score) {
+    return Math.min(Math.floor(score / 100) + 1, 10)
+  }
+
+  useEffect(() => {
+    setDisplayScore(cookies.user.score)
+  })
+
   function ProgressBar(props) {
     return (
       <div className="progress-container">
         <div className="progress-bar">
-          <div className="progress-bar-fill" style={{ width: progress() + '%', transitionDuration: '2s'}} />
+          <div className="progress-bar-fill" style={{ width: cookies.user.score + '%', transitionDuration: '2s'}} />
         </div>
       </div>
     )
@@ -59,7 +70,7 @@ const App = () => {
       <div className="popup-container">
        <div className="popup-body">
         <div style={{marginTop: '1rem', display: 'flex', flexDirection: 'row', justifyContent:'flex-end'}}>
-          <div onClick={() => setLevelup(false)} className="score" style={{height: 'auto', paddingBottom: '3px', paddingTop: '3px'}}>
+          <div onClick={() => setLevelup(false)} className="close-button">
           close
           </div>
         </div>
@@ -81,12 +92,12 @@ const App = () => {
       <div className="popup-container">
        <div className="popup-body">
         <div style={{marginTop: '1rem', display: 'flex', flexDirection: 'row', justifyContent:'flex-end'}}>
-          <div onClick={() => setSelectedChallenge(null)} className="score" style={{height: 'auto', paddingBottom: '3px', paddingTop: '3px'}}>
+          <div onClick={() => setSelectedChallenge(null)} className="close-button" >
           close
           </div>
         </div>
         <p>{selectedChallenge.name}</p>
-        <p>{selectedChallenge.icon}</p>
+        <p style={{fontSize: '50px'}}>{selectedChallenge.icon}</p>
         <p style={{padding:'3rem'}}>{selectedChallenge.instructions}</p>
         <div className="done-button" onClick={() => doChallenge()}>Done</div>
        </div>
@@ -104,8 +115,12 @@ const App = () => {
             <li
               key={index}
               className='challenge'
-              onClick={() => openPopup(item)}
-              style={cookies.user.completed.includes(item.id) ? {backgroundColor: 'lightgrey'} : {}}
+              onClick={() => {if(!cookies.user.completed.includes(item.id)) openPopup(item)}}
+              style={
+                cookies.user.completed.includes(item.id) ?
+                  {backgroundColor: 'lightgrey', color: 'gray', border: '5px solid grey'} :
+                  {border: '5px solid' + levelColors[item.level - 1]}
+              }
             >
                 {item.name + item.icon}
             </li>
@@ -126,7 +141,7 @@ const App = () => {
             <p>My daily challenges</p>
           </div>
           <div className="score">
-            <p>{level(cookies.user.score)}</p>
+            <p>{level(displayScore)}</p>
           </div>
         </div>
         <ChallengeList />

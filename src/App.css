@@ -16,7 +16,7 @@
 }
 
 .body {
-  background-color: #fff147;
+  background-color: #fcff81;
   width: 100%;
   max-width: 600px;
   height: 100%;
@@ -68,7 +68,27 @@
   align-items: center;
   justify-content: center;
 }
+
 .score p {
+  margin: 0;
+}
+
+.close-button {
+  background-color: #4aecf1;
+  height: 6rem;
+  aspect-ratio: 1;
+  
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+
+  color: white;
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-button p {
   margin: 0;
 }
 
@@ -111,10 +131,9 @@
 .popup-container {
   position: fixed;
   width: 100%;
+  max-width: 600px;
   height: 100%;
   top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   color: #C3639D;
@@ -136,8 +155,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-  border-left: 5px solid #00000022;
-  border-bottom: 5px solid #00000022;
+  border-left: 7px solid #000000ee;
+  border-bottom: 7px solid #000000ee;
   }
   
   .done-button {

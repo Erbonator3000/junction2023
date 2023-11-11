@@ -98,6 +98,13 @@
       "id": "kelb5bn889j"
   },
   {
+      "name": "Balancing Act",
+      "icon": "⚖️🤹‍♂️",
+      "instructions": "Stand on one leg for 3 minutes, repeat x 3. Maybe one day you'll walk on a tightrope!",
+      "level": 3,
+      "id": "kolb5cn887j"
+  },
+  {
       "name": "Fitness Fusion Fanatic",
       "icon": "🏃‍♂️🔝",
       "instructions": "Climb up and down stairs for 10 minutes. A quick and effective cardio blast!",
@@ -124,6 +131,13 @@
       "instructions": "Rollerblade for 20 minutes if you have access to a safe area. A fun way to stay fit!",
       "level": 4,
       "id": "lgf5f5fadma"
+  },
+  {
+      "name": "Water Works",
+      "icon": "🌊💪",
+      "instructions": "Excercise in the pool for 15 minutes. Splash away!",
+      "level": 4,
+      "id": "jfh6ji6f7b1b"
   },
   {
       "name": "Cardio Connoisseur",
@@ -153,6 +167,13 @@
       "level": 5,
       "id": "jfh0ji0f7a1a"
   },
+ {
+      "name": "Balancing in the Dark",
+      "icon": "🌌⚖️",
+      "instructions": "Cover your eyes and stand on one leg for as long as you can. Practise makes perfect!",
+      "level": 5,
+      "id": "ljfdj5dbddb"
+  },
   {
       "name": "Athletic Ace",
       "icon": "🛹🌟",
@@ -180,6 +201,13 @@
       "instructions": "Play a game of Ultimate Frisbee with friends for 20 minutes. It's a great team sport that keeps you moving.",
       "level": 6,
       "id": "f04fmpogj578"
+  },
+  {
+      "name": "Dance Dance Dance",
+      "icon": "🕺🕺🕺",
+      "instructions": "Embark on a dance marathon in your favorite style for 30 minutes. Whether it's hip-hop, salsa, or a funky freestyle, dancing is not only a blast but also a fantastic full-body workout that'll leave you energized and smiling.",
+      "level": 6,
+      "id": "f66f5po5j668"
   },
   {
       "name": "Strength Superhero",
@@ -245,6 +273,13 @@
       "id": "bmlg9l0lm6b"
   },
   {
+      "name": "Stretch It",
+      "icon": "🤸‍♂️✨",
+      "instructions": "Devote 15 minutes to a deep stretching routine. Reach for the stars, touch those toes, and embrace the flexibility journey. Stretching not only enhances your range of motion but also gives your muscles the love they deserve.",
+      "level": 8,
+      "id": "blll990ll9b"
+  },
+  {
       "name": "Triathlon Training",
       "icon": "🏊‍♂️🚴‍♂️🏃‍♀️",
       "instructions": "Swim for 20 minutes, bike for 30 minutes, and run for 15 minutes. Mimic the elements of a triathlon.",
@@ -273,6 +308,13 @@
       "id": "8fbk4ok9n9"
   },
   {
+      "name": "Breathe it Out",
+      "icon": "🌬️🧘‍♂️",
+      "instructions": "Engage in a mindful breathing session for 15 minutes. Find a quiet space, inhale positivity, exhale stress. It's a calming workout for your mind and body, leaving you refreshed and centered.",
+      "level": 9,
+      "id": "7fmk7mk7n7"
+  },
+  {
       "name": "Full Marathon Mania",
       "icon": "🏃‍♂️🏅",
       "instructions": "Run a full marathon if you're up for the challenge. Pace yourself and stay hydrated.",
@@ -299,5 +341,12 @@
       "instructions": "Embark on a challenging hike in the mountains for 2 hours. Take in breathtaking views while testing your endurance.",
       "level": 10,
       "id": "cg02pbelklh"
+  },
+  {
+      "name": "Spring Clean",
+      "icon": "🌷🧹",
+      "instructions": "Revitalize your space with a 30-minute Spring Clean workout. Channel your inner cleaner by briskly dusting, sweeping, and organizing. It's a productive way to break a sweat while giving your surroundings a fresh start.",
+      "level": 10,
+      "id": "cg82kbelkkh"
   }
 ]
