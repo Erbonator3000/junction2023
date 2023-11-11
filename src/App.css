@@ -51,9 +51,11 @@
 
   border-left: 5px solid #00000011;
   border-bottom: 5px solid #00000011;
+
+  color: white;
 }
 
-.progress {
+.progress-container {
   background-color: white;
   height: 5rem;
   width: 80%;
@@ -61,8 +63,34 @@
   margin-bottom: 1rem;
   border-left: 5px solid #e2d649ff;
   border-bottom: 5px solid #e2d649ff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
+.progress-bar {
+  background-color: #39abafff;
+  height: 1rem;
+  width: 70%;
+  border-radius: 100px;
+  border: 5px solid #39abafff;
+  /* border-bottom: 5px solid #e2d649ff; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  transition-duration: 1s;
+}
+
+.progress-bar-fill {
+  transition-duration: 1s;
+  background-color: #4aecf1;
+  height: 100%;
+  width: 70%;
+  border-radius: 10px;
+}
 
 .popup-container {
   position: fixed;
@@ -78,14 +106,32 @@
   justify-content: center;
   align-items: center;
   }
+
   .popup-body {
-  height: 80%;
-  width: 80%;
   text-align: center;
-  margin: auto;
+  margin: 10%;
+  padding: 0 0 2rem 0;
   border-radius: 15px;
   border-color: black;
   background: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  font-size: x-large
+  font-size: x-large;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  border-left: 5px solid #00000022;
+    border-bottom: 5px solid #00000022;
+  }
+  
+  .done-button {
+    width: 50%;
+    padding: 10px;
+    background-color: #4aecf1;
+    border-radius: 100px;
+    align-self: center;
+    color: white;
+
+    border-left: 5px solid #00000011;
+    border-bottom: 5px solid #00000011;
   }
