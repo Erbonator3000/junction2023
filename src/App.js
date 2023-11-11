@@ -5,7 +5,6 @@ import './challengeList.css';
 import './close.css';
 import challenges from './challenges.json';
 import { shareOnMobile } from 'react-mobile-share';
-import orang from './orang.jpeg';
 
 const App = () => {
   const [selectedChallenge, setSelectedChallenge] = useState(null);
@@ -70,7 +69,6 @@ const App = () => {
           shareOnMobile({
             url: "https://master--tranquil-cobbler-a5bc99.netlify.app/",
             title: "Hey! I just reached level " + level(cookies.user.score) + ', Your turn to get moving! ',
-            image: orang
           })
         }}>Share with friends!</div>
        </div>
