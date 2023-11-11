@@ -1,0 +1,37 @@
+
+.challenges {
+  background-color: white;
+  flex: 1;
+  width: 80%;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 1rem;
+
+  list-style-type: none;
+
+  border-left: 5px solid #e2d649ff;
+  border-bottom: 5px solid #e2d649ff;
+}
+
+.challenge {
+  background-color: white;
+  flex-grow: 1;
+  border-radius: 15px;
+  border: 5px solid #2E75B6;;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+
+  color: black;
+  
+
+  
+}

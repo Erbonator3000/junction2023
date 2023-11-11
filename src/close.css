@@ -1,0 +1,8 @@
+.close {
+    background: red;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+    padding: 0 1rem 0 1rem;
+
+}
