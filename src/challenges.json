@@ -1,212 +1,260 @@
 [
   {
-    "name": "Jumping Jack Fiesta 🦘😅",
-    "instructions": "Do 3 sets of 15 jumping jacks. Jump, clap, and get that heart pumping!",
-    "level": 1
+      "name": "Jumping Jack Fiesta 🦘😅",
+      "instructions": "Do 3 sets of 15 jumping jacks. Jump, clap, and get that heart pumping!",
+      "level": 1,
+      "id": "a3cg0f5ed6ba"
   },
   {
-    "name": "Dance Break 💃🕺",
-    "instructions": "Groove to your favorite song for 10 minutes. Dance like nobody\"s watching!",
-    "level": 1
+      "name": "Dance Break 💃🕺",
+      "instructions": "Groove to your favorite song for 10 minutes. Dance like nobody's watching!",
+      "level": 1,
+      "id": "ikj94a705o2"
   },
   {
-    "name": "Stretch It Out 👇👟",
-    "instructions": "Touch your toes and hold for 30 seconds. Feel the stretch in your legs and back.",
-    "level": 1
+      "name": "Stretch It Out 👇👟",
+      "instructions": "Touch your toes and hold for 30 seconds. Feel the stretch in your legs and back.",
+      "level": 1,
+      "id": "4jpk8pkm73fe"
   },
   {
-    "name": "Step Up Challenge 🚶‍♂️🪜",
-    "instructions": "Find a step or sturdy surface, step up and down for 5 minutes. Easy and effective!",
-    "level": 1
+      "name": "Step Up Challenge 🚶‍♂️🪜",
+      "instructions": "Find a step or sturdy surface, step up and down for 5 minutes. Easy and effective!",
+      "level": 1,
+      "id": "7l3lhamh742f"
   },
   {
-    "name": "Chair Squats 💺💪",
-    "instructions": "Do 2 sets of 10 squats using just a chair. Sit and stand for a mini workout.",
-    "level": 1
+      "name": "Chair Squats 💺💪",
+      "instructions": "Do 2 sets of 10 squats using just a chair. Sit and stand for a mini workout.",
+      "level": 1,
+      "id": "86g3oikliihl"
   },
   {
-    "name": "Power Walk Extravaganza 🚶‍♀️🍃",
-    "instructions": "Walk briskly for 20 minutes. Take in the fresh air and enjoy the scenery.",
-    "level": 2
+      "name": "Power Walk Extravaganza 🚶‍♀️🍃",
+      "instructions": "Walk briskly for 20 minutes. Take in the fresh air and enjoy the scenery.",
+      "level": 2,
+      "id": "emi3mj4f3dph"
   },
   {
-    "name": "Bike Ride Bonanza 🚴‍♂️💨",
-    "instructions": "Cycle around your neighborhood for 15 minutes. Feel the wind in your hair!",
-    "level": 2
+      "name": "Dance a Sweat 💃🕺",
+      "instructions": "Dance fiercely for 15 minutes. But on your favourite playlist and feel the heat!",
+      "level": 2,
+      "id": "emo3mj4f2dpg"
   },
   {
-    "name": "Wall Sit Magic 🧍‍♂️🔥",
-    "instructions": "Hold a wall sit for 1 minute. Feel the burn in those legs.",
-    "level": 2
+      "name": "Bike Ride Bonanza 🚴‍♂️💨",
+      "instructions": "Cycle around your neighborhood for 15 minutes. Feel the wind in your hair!",
+      "level": 2,
+      "id": "7j07d0fg4dkd"
   },
   {
-    "name": "Basketball Bounce-Off 🏀🤘",
-    "instructions": "Dribble a basketball for 10 minutes. Challenge a friend if you can!",
-    "level": 2
+      "name": "Wall Sit Magic 🧍‍♂️🔥",
+      "instructions": "Hold a wall sit for 1 minute. Feel the burn in those legs.",
+      "level": 2,
+      "id": "ecbklceefl8h"
   },
   {
-    "name": "Motion Maestro 🏃‍♀️🌳",
-    "instructions": "Jog for 15 minutes at a comfortable pace. Explore your surroundings!",
-    "level": 3
+      "name": "Basketball Bounce-Off 🏀🤘",
+      "instructions": "Dribble a basketball for 10 minutes. Challenge a friend if you can!",
+      "level": 2,
+      "id": "gmo3g1o2apc"
   },
   {
-    "name": "Hula Hoop Hustle 🌀😄",
-    "instructions": "Hula hoop for 5 minutes. It\"s not just for kids – it\"s a great workout!",
-    "level": 3
+      "name": "Motion Maestro 🏃‍♀️🌳",
+      "instructions": "Jog for 15 minutes at a comfortable pace. Explore your surroundings!",
+      "level": 3,
+      "id": "898ogm89b8kg"
   },
   {
-    "name": "Push-Up Party 💪🔝",
-    "instructions": "Do 2 sets of 10 push-ups. Keep that upper body strong.",
-    "level": 3
+      "name": "Hula Hoop Hustle 🌀😄",
+      "instructions": "Hula hoop for 5 minutes. It's not just for kids – it's a great workout!",
+      "level": 3,
+      "id": "17jl78gamjam"
   },
   {
-    "name": "Soccer Juggling ⚽🕺",
-    "instructions": "Juggle a soccer ball with your feet for 10 minutes. Fancy footwork!",
-    "level": 3
+      "name": "Push-Up Party 💪🔝",
+      "instructions": "Do 2 sets of 10 push-ups. Keep that upper body strong.",
+      "level": 3,
+      "id": "7o375fd5i6k"
   },
   {
-    "name": "Fitness Fusion Fanatic 🏃‍♂️🔝",
-    "instructions": "Climb up and down stairs for 10 minutes. A quick and effective cardio blast!",
-    "level": 4
+      "name": "Soccer Juggling ⚽🕺",
+      "instructions": "Juggle a soccer ball with your feet for 10 minutes. Fancy footwork!",
+      "level": 3,
+      "id": "kelb5bn889j"
   },
   {
-    "name": "Yoga Bliss 🧘‍♀️🌟",
-    "instructions": "Follow a 15-minute yoga routine. Relax, stretch, and find your inner calm.",
-    "level": 4
+      "name": "Fitness Fusion Fanatic 🏃‍♂️🔝",
+      "instructions": "Climb up and down stairs for 10 minutes. A quick and effective cardio blast!",
+      "level": 4,
+      "id": "9bldlnh3h2ff"
   },
   {
-    "name": "Burpee Blitz 🏋️‍♀️💦",
-    "instructions": "Complete 2 sets of 8 burpees. Full-body workout in a short burst.",
-    "level": 4
+      "name": "Yoga Bliss 🧘‍♀️🌟",
+      "instructions": "Follow a 15-minute yoga routine. Relax, stretch, and find your inner calm.",
+      "level": 4,
+      "id": "mhf2bmkepclj"
   },
   {
-    "name": "Rollerblade Rampage 🕺🛼",
-    "instructions": "Rollerblade for 20 minutes if you have access to a safe area. A fun way to stay fit!",
-    "level": 4
+      "name": "Burpee Blitz 🏋️‍♀️💦",
+      "instructions": "Complete 2 sets of 8 burpees. Full-body workout in a short burst.",
+      "level": 4,
+      "id": "k89g7b21g7hb"
   },
   {
-    "name": "Cardio Connoisseur 🏃‍♂️💨",
-    "instructions": "Sprint for 30 seconds, then walk for 30 seconds. Repeat for 10 minutes. High-intensity interval training!",
-    "level": 5
+      "name": "Rollerblade Rampage 🕺🛼",
+      "instructions": "Rollerblade for 20 minutes if you have access to a safe area. A fun way to stay fit!",
+      "level": 4,
+      "id": "lgf5f5fadma"
   },
   {
-    "name": "Rock Climbing Challenge 🧗‍♂️🔝",
-    "instructions": "If possible, try indoor rock climbing for 20 minutes. A unique and challenging workout.",
-    "level": 5
+      "name": "Cardio Connoisseur 🏃‍♂️💨",
+      "instructions": "Sprint for 30 seconds, then walk for 30 seconds. Repeat for 10 minutes. High-intensity interval training!",
+      "level": 5,
+      "id": "8lemon407lej"
   },
   {
-    "name": "Plank-a-Palooza 💪🏋️‍♂️",
-    "instructions": "Hold a plank for 2 minutes. Engage that core!",
-    "level": 5
+      "name": "Rock Climbing Challenge 🧗‍♂️🔝",
+      "instructions": "If possible, try indoor rock climbing for 20 minutes. A unique and challenging workout.",
+      "level": 5,
+      "id": "i4bo1b51b75"
   },
   {
-    "name": "Swim Session 🏊‍♂️🌊",
-    "instructions": "Swim for 15 minutes. A refreshing full-body workout.",
-    "level": 5
+      "name": "Plank-a-Palooza 💪🏋️‍♂️",
+      "instructions": "Hold a plank for 2 minutes. Engage that core!",
+      "level": 5,
+      "id": "dbaa47coc31"
   },
   {
-    "name": "Athletic Ace 🛹🌟",
-    "instructions": "If you have a longboard, cruise around for 30 minutes. It\"s a cool way to mix exercise with fun!",
-    "level": 6
+      "name": "Swim Session 🏊‍♂️🌊",
+      "instructions": "Swim for 15 minutes. A refreshing full-body workout.",
+      "level": 5,
+      "id": "jfh0ji0f7a1a"
   },
   {
-    "name": "Tabata Training ⏱️💪",
-    "instructions": "Choose any exercise (jumping jacks, squats, etc.) and do 20 seconds of intense activity followed by 10 seconds of rest. Repeat for 10 minutes.",
-    "level": 6
+      "name": "Athletic Ace 🛹🌟",
+      "instructions": "If you have a longboard, cruise around for 30 minutes. It's a cool way to mix exercise with fun!",
+      "level": 6,
+      "id": "6e28n718h3g6"
   },
   {
-    "name": "Kangaroo Jumps 🏋️‍♂️💨",
-    "instructions": "Grab a jump rope and jump for 15 minutes. Pretend you\"re a kangaroo bounding through the wild!",
-    "level": 6
+      "name": "Tabata Training ⏱️💪",
+      "instructions": "Choose any exercise (jumping jacks, squats, etc.) and do 20 seconds of intense activity followed by 10 seconds of rest. Repeat for 10 minutes.",
+      "level": 6,
+      "id": "4cpgf71ppf0k"
   },
   {
-    "name": "Ultimate Frisbee Fun 🥏🤝",
-    "instructions": "Play a game of Ultimate Frisbee with friends for 20 minutes. It\"s a great team sport that keeps you moving.",
-    "level": 6
+      "name": "Kangaroo Jumps 🏋️‍♂️💨",
+      "instructions": "Grab a jump rope and jump for 15 minutes. Pretend you're a kangaroo bounding through the wild!",
+      "level": 6,
+      "id": "dag09aoof4i"
   },
   {
-    "name": "Strength Superhero 🚵‍♂️🌲",
-    "instructions": "Take your mountain bike on a trail for 30 minutes. Navigate those twists and turns!",
-    "level": 7
+      "name": "Ultimate Frisbee Fun 🥏🤝",
+      "instructions": "Play a game of Ultimate Frisbee with friends for 20 minutes. It's a great team sport that keeps you moving.",
+      "level": 6,
+      "id": "f04fmpogj578"
   },
   {
-    "name": "Bodyweight Blast 💪🏋️‍♂️",
-    "instructions": "Complete a circuit of squats, lunges, push-ups, and planks. 3 sets, 12 reps each. Build that strength!",
-    "level": 7
+      "name": "Strength Superhero 🚵‍♂️🌲",
+      "instructions": "Take your mountain bike on a trail for 30 minutes. Navigate those twists and turns!",
+      "level": 7,
+      "id": "l48h3i9fbg1"
   },
   {
-    "name": "Parkour Practice 🏞️🤸‍♂️",
-    "instructions": "Find a safe area and practice basic parkour moves for 15 minutes. Channel your inner ninja!",
-    "level": 7
+      "name": "Bodyweight Blast 💪🏋️‍♂️",
+      "instructions": "Complete a circuit of squats, lunges, push-ups, and planks. 3 sets, 12 reps each. Build that strength!",
+      "level": 7,
+      "id": "2phjknnp3nhc"
   },
   {
-    "name": "Tennis Tournament 🎾🏃‍♂️",
-    "instructions": "Play a game of tennis with a friend for 30 minutes. Great for agility and endurance.",
-    "level": 7
+      "name": "Parkour Practice 🏞️🤸‍♂️",
+      "instructions": "Find a safe area and practice basic parkour moves for 15 minutes. Channel your inner ninja!",
+      "level": 7,
+      "id": "52nnbgm1nbbf"
   },
   {
-    "name": "Yoga in the Forrest 🧘🌲",
-    "instructions": "Find inner peace by practicing yoga in a forrest. Breathe in through your nose and out through your mouth!",
-    "level": 7
+      "name": "Tennis Tournament 🎾🏃‍♂️",
+      "instructions": "Play a game of tennis with a friend for 30 minutes. Great for agility and endurance.",
+      "level": 7,
+      "id": "am0phmondde7"
   },
   {
-    "name": "Trail Run Triumph 🏃‍♀️🌲",
-    "instructions": "Go for a trail run for 45 minutes. Connect with nature while pushing your endurance.",
-    "level": 8
+      "name": "Yoga in the Forrest 🧘🌲",
+      "instructions": "Find inner peace by practicing yoga in a forrest. Breathe in through your nose and out through your mouth!",
+      "level": 7,
+      "id": "3408n592l1lm"
   },
   {
-    "name": "Boxing Blitz 🥊💨",
-    "instructions": "Shadowbox for 20 minutes. Throw punches, dodge, and weave for a killer workout.",
-    "level": 8
+      "name": "Trail Run Triumph 🏃‍♀️🌲",
+      "instructions": "Go for a trail run for 45 minutes. Connect with nature while pushing your endurance.",
+      "level": 8,
+      "id": "1iohhmpc0g8j"
   },
   {
-    "name": "Synchronized Swimming 🏊‍♀️🎶",
-    "instructions": "If you have access to a pool, try synchronized swimming for 30 minutes. It\"s not just elegant; it\"s an intense workout.",
-    "level": 8
+      "name": "Boxing Blitz 🥊💨",
+      "instructions": "Shadowbox for 20 minutes. Throw punches, dodge, and weave for a killer workout.",
+      "level": 8,
+      "id": "ama042o75o7i"
   },
   {
-    "name": "Balance Board Bonanza ⚖️🤸‍♀️",
-    "instructions": "Spend 15 minutes on a balance board. It\"s great for core stability and control.",
-    "level": 8
+      "name": "Synchronized Swimming 🏊‍♀️🎶",
+      "instructions": "If you have access to a pool, try synchronized swimming for 30 minutes. It's not just elegant; it's an intense workout.",
+      "level": 8,
+      "id": "obnc7hnb2gmd"
   },
   {
-    "name": "Triathlon Training 🏊‍♂️🚴‍♂️🏃‍♀️",
-    "instructions": "Swim for 20 minutes, bike for 30 minutes, and run for 15 minutes. Mimic the elements of a triathlon.",
-    "level": 9
+      "name": "Balance Board Bonanza ⚖️🤸‍♀️",
+      "instructions": "Spend 15 minutes on a balance board. It's great for core stability and control.",
+      "level": 8,
+      "id": "bmlg9l0lm6b"
   },
   {
-    "name": "Park Workout 🏞️💪",
-    "instructions": "Utilize a local park for a full-body workout. Pull-ups on bars, dips on benches, and sprints between activities for 40 minutes.",
-    "level": 9
+      "name": "Triathlon Training 🏊‍♂️🚴‍♂️🏃‍♀️",
+      "instructions": "Swim for 20 minutes, bike for 30 minutes, and run for 15 minutes. Mimic the elements of a triathlon.",
+      "level": 9,
+      "id": "9m1mma5ddfbd"
   },
   {
-    "name": "Martial Arts Madness 🥋🤯",
-    "instructions": "Practice a martial art of your choice for 30 minutes. Great for discipline and fitness.",
-    "level": 9
+      "name": "Park Workout 🏞️💪",
+      "instructions": "Utilize a local park for a full-body workout. Pull-ups on bars, dips on benches, and sprints between activities for 40 minutes.",
+      "level": 9,
+      "id": "hkmig6p3end"
   },
   {
-    "name": "High-Intensity CrossFit 🏋️‍♀️💥",
-    "instructions": "Try a CrossFit workout, including burpees, kettlebell swings, and box jumps. 3 sets, 15 reps each.",
-    "level": 9
+      "name": "Martial Arts Madness 🥋🤯",
+      "instructions": "Practice a martial art of your choice for 30 minutes. Great for discipline and fitness.",
+      "level": 9,
+      "id": "aem4cf909kfe"
   },
   {
-    "name": "Full Marathon Mania 🏃‍♂️🏅",
-    "instructions": "Run a full marathon if you\"re up for the challenge. Pace yourself and stay hydrated.",
-    "level": 10
+      "name": "High-Intensity CrossFit 🏋️‍♀️💥",
+      "instructions": "Try a CrossFit workout, including burpees, kettlebell swings, and box jumps. 3 sets, 15 reps each.",
+      "level": 9,
+      "id": "8fbk4ok9n9"
   },
   {
-    "name": "Extreme Obstacle Course 🧗‍♀️🏃‍♂️",
-    "instructions": "Create an obstacle course in your backyard or a nearby open area. Climb, crawl, and conquer for 45 minutes.",
-    "level": 10
+      "name": "Full Marathon Mania 🏃‍♂️🏅",
+      "instructions": "Run a full marathon if you're up for the challenge. Pace yourself and stay hydrated.",
+      "level": 10,
+      "id": "kgdebam8amja"
   },
   {
-    "name": "Gymnastics Galore 🤸‍♂️🌟",
-    "instructions": "Incorporate a variety of gymnastic exercises, including flips, handstands, and cartwheels, into a 20-minute routine.",
-    "level": 10
+      "name": "Extreme Obstacle Course 🧗‍♀️🏃‍♂️",
+      "instructions": "Create an obstacle course in your backyard or a nearby open area. Climb, crawl, and conquer for 45 minutes.",
+      "level": 10,
+      "id": "3lo9dk4lgefn"
   },
   {
-    "name": "Rocky Mountain Hike 🏞️🥾",
-    "instructions": "Embark on a challenging hike in the mountains for 2 hours. Take in breathtaking views while testing your endurance.",
-    "level": 10
+      "name": "Gymnastics Galore 🤸‍♂️🌟",
+      "instructions": "Incorporate a variety of gymnastic exercises, including flips, handstands, and cartwheels, into a 20-minute routine.",
+      "level": 10,
+      "id": "d53mcdcen65"
+  },
+  {
+      "name": "Rocky Mountain Hike 🏞️🥾",
+      "instructions": "Embark on a challenging hike in the mountains for 2 hours. Take in breathtaking views while testing your endurance.",
+      "level": 10,
+      "id": "cg02pbelklh"
   }
 ]

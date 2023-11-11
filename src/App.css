@@ -101,7 +101,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  color: black;
+  color: #C3639D;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,13 +121,13 @@
   justify-content: space-between;
   align-items: stretch;
   border-left: 5px solid #00000022;
-    border-bottom: 5px solid #00000022;
+  border-bottom: 5px solid #00000022;
   }
   
   .done-button {
     width: 50%;
     padding: 10px;
-    background-color: #4aecf1;
+    background-color: #C3639D;
     border-radius: 100px;
     align-self: center;
     color: white;
