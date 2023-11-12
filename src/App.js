@@ -154,7 +154,7 @@ const App = () => {
           setLevelup(false)
           setIsExploding(false)
           shareOnMobile({
-            url: "https://master--tranquil-cobbler-a5bc99.netlify.app/",
+            url: "https://crushing-it-daily.netlify.app/",
             title: "Hey! I just reached level " + level(cookies.user.score) + ', Your turn to get moving! ',
           })
         }}>Share with friends!</div>
