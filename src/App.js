@@ -44,6 +44,29 @@ const levelColors = [
   '#BDB2FF',
 ]
 
+const doneSynonymes = [
+  'Crushed it',
+  'Nailed it',
+  'Slapped it',
+  'Bossed it',
+  'Wrapped',
+  'Killed it',
+  'Smashed it',
+  'Owned it',
+  'Locked in',
+  'Flawless',
+  'Minted',
+  'Wrapped up',
+  'Sorted',
+  'Vibing',
+  'Completed it',
+  'Signed, sealed, delivered',
+  'Checked off',
+  'Crushed the challenge',
+  'Locked and loaded',
+  'Aced it',
+]
+
 const App = () => {
   const [selectedChallenge, setSelectedChallenge] = useState(null);
   const [levelup, setLevelup] = useState(false);
@@ -152,7 +175,7 @@ const App = () => {
         <p>{selectedChallenge.name}</p>
         <p style={{fontSize: '50px'}}>{selectedChallenge.icon}</p>
         <p style={{padding:'3rem'}}>{selectedChallenge.instructions}</p>
-        <div className="done-button" onClick={() => doChallenge()}>Done</div>
+        <div className="done-button" onClick={() => doChallenge()}>{doneSynonymes[Math.floor(Math.random()*doneSynonymes.length)]}</div>
        </div>
       </div>
     );
