@@ -149,6 +149,7 @@ const App = () => {
             close
             </div>
           </div>
+          <p>{'Hello!'}<br /><br />{' Here you can find daily fitness challenges. Get up, move around, level up, and get awesome collectibles!'}</p>
           <p>{'May we give you a cookie to save your progress?'}</p>
           <div className="done-button" onClick={() => {
             setAskCookies(false)
