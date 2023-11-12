@@ -72,33 +72,51 @@ const App = () => {
   const [levelup, setLevelup] = useState(false);
   const [displayScore, setDisplayScore] = useState(null);
   const [trophies, setTrophies] = useState(false);
+  const [askCookies, setAskCookies] = useState(true);
   const [cookies, setCookie, removeCookie] = useCookies(['user']);
+  const [tmpUser, setTmpUser] = useState({score: 0, completed: []});
 
   const [isExploding, setIsExploding] = React.useState(false);
-
-  // Set initial cookie
-  if (cookies.user === undefined) {
-    setCookie('user', {score: 0, completed: []})
-  }
 
   function level(score) {
     return Math.min(Math.floor(score / 100) + 1, 10)
   }
   let resetClicks = 0
 
+  let acceptedCookies = false;
+
+
+  // function tmpUser {
+  //   if (acceptedCookies && cookies.user !== undefined) {
+  //     return cookies.user
+  //   }
+  //   return tmpUser
+  // }
+
+  function setUser(user) {
+    setTmpUser(user)
+    if (cookies.user !== undefined) {
+      setCookie('user', user)
+    }
+  }
+
+
   useEffect(() => {
-    setDisplayScore(cookies.user.score)
     resetClicks = 0
+    if (cookies.user !== undefined) {
+      const user = cookies.user
+      setTmpUser(user)
+    }
   })
 
   function ProgressBar(props) {
     return (
       <div className="progress-container" onClick={() => {
-        if(resetClicks > 5) setCookie('user', {score: 0, completed: []})
+        if(resetClicks > 5) setUser({score: 0, completed: []})
         else resetClicks++
       }}>
         <div className="progress-bar">
-          <div className="progress-bar-fill" style={{ width: (cookies.user.score%100) + '%'}} />
+          <div className="progress-bar-fill" style={{ width: (tmpUser.score%100) + '%'}} />
         </div>
       </div>
     )
@@ -109,16 +127,38 @@ const App = () => {
   }
   
   function doChallenge() {
-    const originalLevel = level(cookies.user.score)
-    const newScore = cookies.user.score + 20
+    const originalLevel = level(tmpUser.score)
+    const newScore = tmpUser.score + 20
 
-    setCookie('user', {score: newScore, completed: cookies.user.completed.concat([selectedChallenge.id])})
+    setUser({score: newScore, completed: tmpUser.completed.concat([selectedChallenge.id])})
     setSelectedChallenge(null)
     if (level(newScore) !== originalLevel) {
       setLevelup(true)
       setIsExploding(true)
     }
   }
+
+  function PopupCookies() {
+      return (
+        <div className="popup-container">
+         <div className="popup-body">
+          <div style={{marginTop: '1rem', display: 'flex', flexDirection: 'row', justifyContent:'flex-end'}}>
+            <div onClick={() => {
+              setAskCookies(false)
+            }} className="close-button">
+            close
+            </div>
+          </div>
+          <p>{'May we give you a cookie to save your progress?'}</p>
+          <div className="done-button" onClick={() => {
+            setAskCookies(false)
+            setCookie('user', {score: 0, completed: []})
+            setUser({score: 0, completed: []})
+          }}>Accept</div>
+         </div>
+        </div>
+      );
+    }
 
   function PopupTrophies() {
     return (
@@ -131,7 +171,7 @@ const App = () => {
         </div>
         <p>Badges</p>
         <div className="trophy-grid">
-        {trophiesImages.slice(0, level(cookies.user.score))
+        {trophiesImages.slice(0, level(tmpUser.score))
             .map((item, index) => (
             <img key={index} src={item}/>
           ))}
@@ -153,14 +193,14 @@ const App = () => {
           close
           </div>
         </div>
-        <img src={trophiesImages[level(cookies.user.score) - 1]}/>
-        <p>{'You reached level '+ level(cookies.user.score) + '!'}</p>
+        <img src={trophiesImages[level(tmpUser.score) - 1]}/>
+        <p>{'You reached level '+ level(tmpUser.score) + '!'}</p>
         <div className="done-button" onClick={() => {
           setLevelup(false)
           setIsExploding(false)
           shareOnMobile({
             url: "https://crushing-it-daily.netlify.app/",
-            title: "Hey! I just reached level " + level(cookies.user.score) + ', Your turn to get moving! ',
+            title: "Hey! I just reached level " + level(tmpUser.score) + ', Your turn to get moving! ',
           })
         }}>Share with friends!</div>
        </div>
@@ -190,15 +230,15 @@ const App = () => {
       <div className='challenges'>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           {challenges
-            .filter((item => item.level == level(cookies.user.score) && !cookies.user.completed.includes(item.id)))
-            .concat(challenges.filter((item => item.level == level(cookies.user.score) && cookies.user.completed.includes(item.id))))
+            .filter((item => item.level == level(tmpUser.score) && !tmpUser.completed.includes(item.id)))
+            .concat(challenges.filter((item => item.level == level(tmpUser.score) && tmpUser.completed.includes(item.id))))
             .map((item, index) => (
             <li
               key={index}
               className='challenge'
-              onClick={() => {if(!cookies.user.completed.includes(item.id)) openPopup(item)}}
+              onClick={() => {if(!tmpUser.completed.includes(item.id)) openPopup(item)}}
               style={
-                cookies.user.completed.includes(item.id) ?
+                tmpUser.completed.includes(item.id) ?
                   {backgroundColor: 'lightgrey', color: 'gray', border: '5px solid grey'} :
                   {border: '5px solid' + levelColors[item.level - 1]}
               }
@@ -223,7 +263,7 @@ const App = () => {
           </div>
           <div className="score" onClick={() => setTrophies(true)}>
             {isExploding && <ConfettiExplosion />}
-            <p>{level(displayScore)}</p>
+            <p>{level(tmpUser.score)}</p>
           </div>
         </div>
         <ChallengeList />
@@ -231,6 +271,7 @@ const App = () => {
         {selectedChallenge ? <Popup /> : null}
         {levelup ? <PopupLevelup /> : null}
         {trophies ? <PopupTrophies /> : null}
+        {askCookies && cookies.user === undefined ? <PopupCookies /> : null}
         </div>
       </div>
     </div>
