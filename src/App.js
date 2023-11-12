@@ -5,6 +5,7 @@ import './challengeList.css';
 import './close.css';
 import challenges from './challenges.json';
 import { shareOnMobile } from 'react-mobile-share';
+import ConfettiExplosion from 'react-confetti-explosion';
 
 import sports01 from './img/sports01.jpg';
 import sports02 from './img/sports02.jpg';
@@ -50,6 +51,8 @@ const App = () => {
   const [trophies, setTrophies] = useState(false);
   const [cookies, setCookie, removeCookie] = useCookies(['user']);
 
+  const [isExploding, setIsExploding] = React.useState(false);
+
   // Set initial cookie
   if (cookies.user === undefined) {
     setCookie('user', {score: 0, completed: []})
@@ -85,6 +88,7 @@ const App = () => {
     setSelectedChallenge(null)
     if (level(newScore) !== originalLevel) {
       setLevelup(true)
+      setIsExploding(true)
     }
   }
 
@@ -97,7 +101,7 @@ const App = () => {
           close
           </div>
         </div>
-        <p>Padges</p>
+        <p>Badges</p>
         <div className="trophy-grid">
         {trophiesImages.slice(0, level(cookies.user.score))
             .map((item, index) => (
@@ -114,7 +118,10 @@ const App = () => {
       <div className="popup-container">
        <div className="popup-body">
         <div style={{marginTop: '1rem', display: 'flex', flexDirection: 'row', justifyContent:'flex-end'}}>
-          <div onClick={() => setLevelup(false)} className="close-button">
+          <div onClick={() => {
+            setLevelup(false)
+            setIsExploding(false)
+          }} className="close-button">
           close
           </div>
         </div>
@@ -122,6 +129,7 @@ const App = () => {
         <p>{'You reached level '+ level(cookies.user.score) + '!'}</p>
         <div className="done-button" onClick={() => {
           setLevelup(false)
+          setIsExploding(false)
           shareOnMobile({
             url: "https://master--tranquil-cobbler-a5bc99.netlify.app/",
             title: "Hey! I just reached level " + level(cookies.user.score) + ', Your turn to get moving! ',
@@ -186,6 +194,7 @@ const App = () => {
             <p>My daily challenges</p>
           </div>
           <div className="score" onClick={() => setTrophies(true)}>
+            {isExploding && <ConfettiExplosion />}
             <p>{level(displayScore)}</p>
           </div>
         </div>
