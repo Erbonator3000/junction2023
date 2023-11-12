@@ -6,6 +6,29 @@ import './close.css';
 import challenges from './challenges.json';
 import { shareOnMobile } from 'react-mobile-share';
 
+import sports01 from './img/sports01.jpg';
+import sports02 from './img/sports02.jpg';
+import sports03 from './img/sports03.jpg';
+import sports04 from './img/sports04.jpg';
+import sports05 from './img/sports05.jpg';
+import sports06 from './img/sports06.jpg';
+import sports07 from './img/sports07.jpg';
+import sports08 from './img/sports08.jpg';
+import sports09 from './img/sports09.jpg';
+import sports10 from './img/sports10.jpg';
+
+const trophiesImages = [
+  sports01,
+  sports02,
+  sports03,
+  sports04,
+  sports05,
+  sports06,
+  sports07,
+  sports08,
+  sports09,
+  sports10
+]
 
 const levelColors = [
   '#FFADAD',
@@ -24,6 +47,7 @@ const App = () => {
   const [selectedChallenge, setSelectedChallenge] = useState(null);
   const [levelup, setLevelup] = useState(false);
   const [displayScore, setDisplayScore] = useState(null);
+  const [trophies, setTrophies] = useState(false);
   const [cookies, setCookie, removeCookie] = useCookies(['user']);
 
   // Set initial cookie
@@ -41,7 +65,7 @@ const App = () => {
 
   function ProgressBar(props) {
     return (
-      <div className="progress-container">
+      <div className="progress-container" onClick={() => setCookie('user', {score: 0, completed: []})}>
         <div className="progress-bar">
           <div className="progress-bar-fill" style={{ width: (cookies.user.score%100) + '%'}} />
         </div>
@@ -64,6 +88,26 @@ const App = () => {
     }
   }
 
+  function PopupTrophies() {
+    return (
+      <div className="popup-container">
+       <div className="popup-body">
+        <div style={{marginTop: '1rem', display: 'flex', flexDirection: 'row', justifyContent:'flex-end'}}>
+          <div onClick={() => setTrophies(false)} className="close-button">
+          close
+          </div>
+        </div>
+        <p>Padges</p>
+        <div className="trophy-grid">
+        {trophiesImages.slice(0, level(cookies.user.score))
+            .map((item, index) => (
+            <img key={index} src={item}/>
+          ))}
+        </div>
+       </div>
+      </div>
+    );
+  };
 
   function PopupLevelup() {
     return (
@@ -74,6 +118,7 @@ const App = () => {
           close
           </div>
         </div>
+        <img src={trophiesImages[level(cookies.user.score) - 1]}/>
         <p>{'You reached level '+ level(cookies.user.score) + '!'}</p>
         <div className="done-button" onClick={() => {
           setLevelup(false)
@@ -140,7 +185,7 @@ const App = () => {
           <div className="title">
             <p>My daily challenges</p>
           </div>
-          <div className="score">
+          <div className="score" onClick={() => setTrophies(true)}>
             <p>{level(displayScore)}</p>
           </div>
         </div>
@@ -148,6 +193,7 @@ const App = () => {
         <ProgressBar />
         {selectedChallenge ? <Popup /> : null}
         {levelup ? <PopupLevelup /> : null}
+        {trophies ? <PopupTrophies /> : null}
         </div>
       </div>
     </div>

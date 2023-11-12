@@ -153,7 +153,7 @@
   text-align: center;
   width: 80%;
   min-height: 80%;
-  max-height: 100%;
+  max-height: 80%;
   padding: 0 0 2rem 0;
   border-radius: 15px;
   border-color: black;
@@ -167,10 +167,18 @@
   border-left: 7px solid #000000ee;
   border-bottom: 7px solid #000000ee;
   }
+
   .popup-body p {
     margin-bottom: 5px;
   }
   
+  .popup-body img {
+    width: 50%;
+    aspect-ratio: 1;
+    margin: 2%;
+    align-self: center;
+  }
+
   .done-button {
     width: 50%;
     padding: 10px;
@@ -181,4 +189,21 @@
 
     border-left: 5px solid #00000011;
     border-bottom: 5px solid #00000011;
+  }
+
+
+  .trophy-grid {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 10%;
+    justify-content: center;
+    
+  }
+
+  .trophy-grid img {
+    width: 25%;
+    aspect-ratio: 1;
+    margin: 2%;
   }
