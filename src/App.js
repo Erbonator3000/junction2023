@@ -43,7 +43,7 @@ const App = () => {
     return (
       <div className="progress-container">
         <div className="progress-bar">
-          <div className="progress-bar-fill" style={{ width: cookies.user.score + '%', transitionDuration: '2s'}} />
+          <div className="progress-bar-fill" style={{ width: (cookies.user.score%100) + '%'}} />
         </div>
       </div>
     )
