@@ -84,14 +84,19 @@ const App = () => {
   function level(score) {
     return Math.min(Math.floor(score / 100) + 1, 10)
   }
+  let resetClicks = 0
 
   useEffect(() => {
     setDisplayScore(cookies.user.score)
+    resetClicks = 0
   })
 
   function ProgressBar(props) {
     return (
-      <div className="progress-container" onClick={() => setCookie('user', {score: 0, completed: []})}>
+      <div className="progress-container" onClick={() => {
+        if(resetClicks > 5) setCookie('user', {score: 0, completed: []})
+        else resetClicks++
+      }}>
         <div className="progress-bar">
           <div className="progress-bar-fill" style={{ width: (cookies.user.score%100) + '%'}} />
         </div>
